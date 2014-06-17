@@ -1,7 +1,6 @@
-# GitIam
+# git_iam
 
 Command line tool for easily switching git authors, remotes, and other configs on shared computers.
-
 
 ## Installation
 
@@ -47,7 +46,7 @@ Find all available commands
 $ iam
 ```
 
-Find details about a commands
+Find details about a command
 
 ```shell
 $ iam help [command]
