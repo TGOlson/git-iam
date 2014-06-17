@@ -1,6 +1,7 @@
 # GitIam
 
-TODO: Write a gem description
+Command line tool for easily switching git authors, remotes, and other configs on shared computers.
+
 
 ## Installation
 
@@ -18,7 +19,39 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Run via the command line using the command `iam`.
+
+Find out who you are (current git config)
+
+```shell
+$ iam who
+```
+
+Set current user
+
+```shell
+$ iam [username]
+```
+
+Set current repo
+
+```shell
+$ iam onrepo [repo_name]
+```
+
+## Available commands
+
+Find all available commands
+
+```shell
+$ iam
+```
+
+Find details about a commands
+
+```shell
+$ iam help [command]
+```
 
 ## Contributing
 
