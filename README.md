@@ -53,6 +53,13 @@ Find details about a command
 $ iam help [command]
 ```
 
+## TODO
+
+* Consider using flags for any special args besides default `iam [username]` command (currently typos will always set config)
+* Create helpers for changing options on remote urls
+* Create helper for viewing current configs
+* Consider integrating `git-pair` for pairing config
+
 ## Contributing
 
 1. Fork it ( http://github.com/<my-github-username>/git_iam/fork )
