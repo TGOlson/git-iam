@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["tydotg@gmail.com"]
   spec.summary       = %q{Command line tool for easily switching git authors, remotes, and other configs on shared computers.}
   spec.description   = %q{Command line tool for easily switching git authors, remotes, and other configs on shared computers.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/TGOlson/git_iam"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

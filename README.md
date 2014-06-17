@@ -2,11 +2,14 @@
 
 Command line tool for easily switching git authors, remotes, and other configs on shared computers.
 
-*Currently in development
+**Currently in development**
 
-* using this guide: https://github.com/radar/guides/blob/master/gem-development.md
-* with a little help from here too: http://robdodson.me/blog/2012/06/13/writing-a-command-line-tool-in-ruby/
-* major props to [git pair](https://github.com/chrisk/git-pair)
+References
+
+* [Great ruby gem cli guide](https://github.com/radar/guides/blob/master/gem-development.md)
+* [Nice ruby executable resource](http://robdodson.me/blog/2012/06/14/how-to-write-a-command-line-ruby-gem/)
+* Major props to [git pair](https://github.com/chrisk/git-pair)
+* Inspiration from [pivotal git scripts](https://github.com/pivotal/git_scripts)
 
 ## Installation
 
@@ -18,22 +21,21 @@ $ gem install git_iam
 
 Run via the command line using the command `iam`.
 
+Set current user name and remote account
+```
+$ iam [user_name]
+```
+
 Find out who you are (current git config)
 
 ```
 $ iam who
 ```
 
-Set current user
+Change user name (good for pairing)
 
 ```
-$ iam [username]
-```
-
-Set current repo
-
-```
-$ iam onrepo [repo_name]
+$ iam aka [alias_name]
 ```
 
 ## Available commands
