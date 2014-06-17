@@ -22,11 +22,12 @@ $ gem install git_iam
 Run via the command line using the command `iam`.
 
 Set current user name and remote account
+
 ```
 $ iam [user_name]
 ```
 
-Find out who you are (current git config)
+Check current user name and email
 
 ```
 $ iam who
