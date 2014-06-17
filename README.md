@@ -2,6 +2,11 @@
 
 Command line tool for easily switching git authors, remotes, and other configs on shared computers.
 
+*Currently in development
+
+* using this guide: https://github.com/radar/guides/blob/master/gem-development.md
+* with a little help from here too: http://robdodson.me/blog/2012/06/13/writing-a-command-line-tool-in-ruby/
+
 ## Installation
 
 Add this line to your application's Gemfile:
