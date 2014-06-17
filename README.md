@@ -55,7 +55,7 @@ $ iam help [command]
 
 ## TODO
 
-* Consider using flags for any special args besides default `iam [username]` command (currently typos will always set config)
+* Consider using flags for any special args besides default `iam [username]` command, such as `iam --who` or `iam --aka someone` (currently typos will always set config)
 * Create helpers for changing options on remote urls
 * Create helper for viewing current configs
 * Consider integrating `git-pair` for pairing config
