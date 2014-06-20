@@ -21,22 +21,22 @@ $ gem install git_iam
 
 Run via the command line using the command `iam`.
 
-Set current user name and remote account
+Set current user name and remote origin url
 
 ```
 $ iam [user_name]
 ```
 
-Check current user name and email
+Check current user name, email and remote origin url
 
 ```
 $ iam who
 ```
 
-Change user name (good for pairing)
+Reset to global git config values
 
 ```
-$ iam aka [alias_name]
+$ iam reset
 ```
 
 ## Available commands
@@ -55,14 +55,16 @@ $ iam help [command]
 
 ## TODO
 
-* Consider using flags for any special args besides default `iam [username]` command, such as `iam --who` or `iam --aka someone` (currently typos will always set config)
-* Create helpers for changing options on remote urls
-* Create helper for viewing current configs
-* Consider integrating `git-pair` for pairing config
+* Create pairing module - consider command `iam also [username]
+* Add options to `iam [username]` commands, such as `--nameonly` or `--remoteonly`.
+* Create helpers for changing options on remote urls `--branch`, `--remote`, etc.
+* Create helper for viewing current configs.
+* Consider integrating `git-pair` for pairing config.
+* Implement a `--force` for `iam [username]` incase the username conflicts with any reserved keywords.
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/git_iam/fork )
+1. Fork it ( git shttp://github.com/<my-github-username>/git_iam/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

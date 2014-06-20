@@ -9,35 +9,20 @@ module GitIam
       Helpers.pretty_print GitIam::Iam.who
     end
 
-    desc "aka [USERNAME]", "Sets current user name and remote account name."
-    def aka(user_name)
-      Helpers.pretty_print GitIam::Iam.set_user_name(user_name)
+    desc "reset", "Reset the current local git settings to the global config."
+    def reset
+      Helpers.pretty_print GitIam::Iam.reset
     end
 
-    # desc "using", "Returns current remote settings."
-    # def using
-    #   puts GitIam::Iam.using
-    # end
-
-    # desc "onaccount", "Sets remote origin account name."
-    # def onaccount(account)
-    #   puts GitIam::Iam.set_origin_account(account)
-    # end
-
-    # desc "on", "Sets settings with flags."
-    # method_option :repo, :aliases => "-r"
-    # method_option :branch, :aliases => "-b"
-    # def on
-    #   puts GitIam::Iam.set(options)
-    # end
-
-    # desc "onrepo REPO", "Sets current repo name."
-    # def onrepo(repo)
-    #   puts GitIam::Iam.set('repo' => repo)
+    # Not implemented
+    # Will later be used for pairing
+    # desc "aka [USERNAME]", "Sets current user name and remote account name."
+    # def aka(user_name)
+    #   Helpers.pretty_print GitIam::Iam.set_user_name(user_name)
     # end
 
     desc "[USERNAME]", "Sets current user name and remote origin account."
-    def set_user(user)
+    def set_user(user, *args)
       Helpers.pretty_print GitIam::Iam.set_user(user)
     end
 
@@ -49,7 +34,6 @@ module GitIam
 
       set_user method.to_s
     end
-
   end
 
   class Helpers
