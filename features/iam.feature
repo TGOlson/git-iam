@@ -10,3 +10,9 @@ Feature: Iam
   Scenario: Set current user
     When I run "iam tyler"
     Then the output should contain "tyler"
+
+  # Not a very good test
+  # Mainly used to reset previous test
+  Scenario: Reset settings
+    When I run "iam reset"
+    Then the output should contain "user.name"
