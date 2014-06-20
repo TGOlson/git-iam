@@ -55,7 +55,7 @@ $ iam help [command]
 
 ## TODO
 
-* Create pairing module - consider command `iam also [username]
+* Create pairing module - consider command `iam also [username]`
 * Add options to `iam [username]` commands, such as `--nameonly` or `--remoteonly`.
 * Create helpers for changing options on remote urls `--branch`, `--remote`, etc.
 * Create helper for viewing current configs.
