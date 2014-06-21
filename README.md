@@ -38,7 +38,7 @@ $ git iam reset
 
 ### Looking for a pairing solution?
 
-`git-iam` works great with [git-pair](https://github.com/chrisk/git-pair). Easily set up a pair profile with `git-pair`, and then change config value with `git-iam`.
+`git-iam` works great with [git-pair](https://github.com/chrisk/git-pair). Easily set up a pair profile with `git-pair`, and then change config values with `git-iam`.
 
 ## Available commands
 
@@ -64,7 +64,7 @@ $ git iam help [COMMAND]
 ## TODO
 
 * Create pairing module - consider command `git iam also [username]`
-* Add a remote-only setting option `git iam [USERNAME] --remoteonly [REMOTEACOUNT]`, or `git iam remote [REMOTEACOUNT]
+* Add a remote-only setting option `git iam [USERNAME] --remoteonly [REMOTEACOUNT]`, or `git iam remote [REMOTEACOUNT]`
 * Create helpers for changing options on remote urls `--branch`, `--remote`, etc. (might overlap with previous bullet)
 * Consider integrating `git-pair` for pairing config.
 * Implement a `--force` for `git iam [username]` incase the username conflicts with any reserved keywords.
