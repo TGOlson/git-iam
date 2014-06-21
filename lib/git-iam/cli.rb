@@ -6,46 +6,37 @@ module GitIam
 
     desc "who", "Returns current user name and email from config."
     def who
-      Helpers.pretty_print GitIam::Iam.who
+      puts GitIam::Iam.who
     end
 
     desc "reset", "Reset the current local git settings to the global config."
     def reset
-      Helpers.pretty_print GitIam::Iam.reset
+      GitIam::Iam.reset
+      puts GitIam::Iam.who
     end
 
-    # Not implemented
-    # Will later be used for pairing
-    # desc "aka [USERNAME]", "Sets current user name and remote account name."
-    # def aka(user_name)
-    #   Helpers.pretty_print GitIam::Iam.set_user_name(user_name)
-    # end
+    desc "[USERNAME] [EMAIL]", "Set git user name and remote origin account. Optionally set git email address, if desired."
+    def set_user_config(args)
+      GitIam::Iam.set_user_config args
+      puts GitIam::Iam.who
+    end
 
-    desc "[USERNAME]", "Sets current user name and remote origin account."
-    def set_user(user, *args)
-      Helpers.pretty_print GitIam::Iam.set_user(user)
+    desc "user [USERNAME]", "Set git user name."
+    def user(name)
+      GitIam::Iam.set_user_name name
+      puts GitIam::Iam.who
+    end
+
+    desc "email [EMAIL]", "Set git email address."
+    def email(email)
+      GitIam::Iam.set_user_email email
+      puts GitIam::Iam.who
     end
 
     # allows user to be set without special flags
     def method_missing(method, *args)
-      # might be useful for taking in more information with default iam
-      # such as email
-      # args = [method.to_s] + args
-
-      set_user method.to_s
-    end
-  end
-
-  class Helpers
-    def self.pretty_print(statement)
-      if statement.is_a?(Array)
-        return statement.each{ |s| pretty_print s }
-      end
-
-      statement.each do |key, value|
-        print key.ljust(20)
-        print value + "\n"
-      end
+      args.unshift(method.to_s)
+      set_user_config args
     end
   end
 end

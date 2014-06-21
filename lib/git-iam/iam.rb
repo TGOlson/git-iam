@@ -7,19 +7,20 @@ MESSAGES = {
 module GitIam
   class Iam
 
-    def self.set_user(user)
-      self.set_user_name(user)
-      # self.set_user_email
-      self.set_origin_account(user)
-      who
+    def self.set_user_config(args)
+      user_name = args.shift
+      user_email = args.shift
+      self.set_user_name user_name
+      self.set_user_email user_email unless user_email.nil?
+      self.set_origin_account user_name
     end
 
     def self.set_user_name(user_name)
       `git config --local user.name #{user_name}`
     end
 
-    def self.set_user_email
-      # TODO - implement setting user email
+    def self.set_user_email(user_email)
+      `git config --local user.email #{user_email}`
     end
 
     def self.set_origin_account(account)
@@ -47,7 +48,6 @@ module GitIam
       `git config --local --unset user.name`
       `git config --local --unset user.email`
       set_origin_account user_name
-      who
     end
 
     def self.user_name
