@@ -2,15 +2,6 @@
 
 Command line tool for easily switching git authors, remotes, and other configs on shared computers.
 
-**Currently in development**
-
-References
-
-* [Great ruby gem cli guide](https://github.com/radar/guides/blob/master/gem-development.md)
-* [Nice ruby executable resource](http://robdodson.me/blog/2012/06/14/how-to-write-a-command-line-ruby-gem/)
-* Major props to [git pair](https://github.com/chrisk/git-pair)
-* Inspiration from [pivotal git scripts](https://github.com/pivotal/git_scripts)
-
 ## Installation
 
 ```
@@ -45,6 +36,10 @@ Reset to global git config values
 $ git iam reset
 ```
 
+### Looking for a pairing solution?
+
+`git-iam` works great with [git-pair](https://github.com/chrisk/git-pair). Easily set up a pair profile with `git-pair`, and then change config value with `git-iam`.
+
 ## Available commands
 
 * `git iam [USERNAME]` Set user name and remote origin url.
@@ -63,15 +58,14 @@ $ git iam
 Find details about a command
 
 ```
-$ git iam help [command]
+$ git iam help [COMMAND]
 ```
 
 ## TODO
 
 * Create pairing module - consider command `git iam also [username]`
-* Add options to `git iam [username]` commands, such as `--nameonly` or `--remoteonly`.
-* Create helpers for changing options on remote urls `--branch`, `--remote`, etc.
-* Create helper for viewing current configs.
+* Add a remote-only setting option `git iam [USERNAME] --remoteonly [REMOTEACOUNT]`, or `git iam remote [REMOTEACOUNT]
+* Create helpers for changing options on remote urls `--branch`, `--remote`, etc. (might overlap with previous bullet)
 * Consider integrating `git-pair` for pairing config.
 * Implement a `--force` for `git iam [username]` incase the username conflicts with any reserved keywords.
 
