@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+require 'git-iam/cli'
+GitIam::CLI.start
