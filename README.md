@@ -19,15 +19,21 @@ $ gem install git-iam
 
 ## Usage
 
-Run via the command line using the command `iam`.
+Run via the command line using the command `git iam`.
 
-Set current user name and remote origin url
+Set user name and remote origin url
 
 ```
-$ git iam [user_name]
+$ git iam [USERNAME]
 ```
 
-Check current user name, email and remote origin url
+Set user email along with name and remote origin url. (same as command above, optionally accepting an email address)
+
+```
+$ git iam [USERNAME] [EMAIL]
+```
+
+View current user name, email and remote origin url
 
 ```
 $ git iam who
@@ -40,6 +46,13 @@ $ git iam reset
 ```
 
 ## Available commands
+
+* `git iam [USERNAME]` Set user name and remote origin url.
+* `git iam [USERNAME] [EMAIL]` Set user email along with name and remote origin url.
+* `git iam who` View current user name, email and remote origin url.
+* `git iam reset` Reset to global git config values.
+* `git iam user [USERNAME]` Set user name.
+* `git iam email [EMAIL]` Set user email.
 
 Find all available commands
 
@@ -55,12 +68,12 @@ $ git iam help [command]
 
 ## TODO
 
-* Create pairing module - consider command `iam also [username]`
-* Add options to `iam [username]` commands, such as `--nameonly` or `--remoteonly`.
+* Create pairing module - consider command `git iam also [username]`
+* Add options to `git iam [username]` commands, such as `--nameonly` or `--remoteonly`.
 * Create helpers for changing options on remote urls `--branch`, `--remote`, etc.
 * Create helper for viewing current configs.
 * Consider integrating `git-pair` for pairing config.
-* Implement a `--force` for `iam [username]` incase the username conflicts with any reserved keywords.
+* Implement a `--force` for `git iam [username]` incase the username conflicts with any reserved keywords.
 
 ## Contributing
 
