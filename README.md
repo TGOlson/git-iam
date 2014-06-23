@@ -16,12 +16,20 @@ Set user name and remote origin url
 
 ```
 $ git iam [USERNAME]
+
+user.name: [USERNAME]
+user.email: <current-git-config-email>
+remote.origin.url: https://github.com/[USERNAME]/<current-repo>.git
 ```
 
 Set user email along with name and remote origin url. (same as command above, optionally accepting an email address)
 
 ```
 $ git iam [USERNAME] [EMAIL]
+
+user.name: [USERNAME]
+user.email: [EMAIL]
+remote.origin.url: https://github.com/[USERNAME]/<current-repo>.git
 ```
 
 View current user name, email and remote origin url
